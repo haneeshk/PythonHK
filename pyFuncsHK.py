@@ -26,3 +26,4 @@ class Slash2:
 # Sum = Slash2(sum)
 # [1, 2, 3]//Sum//Print
 # ["This is great", 0.002, 3000.0002,1.2333]//Slash2(tableform)
+# trivial change
