@@ -1,3 +1,5 @@
+# This file has been superseeded by FP_Operators.ipynb
+
 import re
 def genPatt(patt):
     p=re.compile(str(patt))
@@ -9,19 +11,19 @@ def only(patt,strs):
     return list(_)
 def TableForm(lst):
     print(*lst, sep='\n')
-    
-    
-    
-    
+
+
+
+
 class Slash2:
     def __init__(self, fn):
         self.fn = fn
 
     def __rfloordiv__(self, other):
-        return self.fn(other)    
-    
-    
-    
+        return self.fn(other)
+
+
+
 # Print = Slash2(print)
 # Sum = Slash2(sum)
 # [1, 2, 3]//Sum//Print
