@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # ##
-# 
+#
 # [Start Up script](file://Users/haneeshkesari/.ipython/profile_default/startup/00_stratup.py)
 
 # In[ ]:
@@ -10,10 +10,6 @@
 
 get_ipython().run_cell_magic('latex', '', '\n$$\\newcommand{\\u}[1]{\\boldsymbol{#1}}$$\n    \n    \n$\\u{x}$    \n    \n\\begin{equation}\nx=2\n\\end{equation}')
 
-%%latex 
-
-$\u{x}$
-# In[2]:
 
 
 get_ipython().run_cell_magic('latex', '','\n$$\\newcommand{\\u}[1]{\\boldsymbol{#1}}$$\n$$\newcommand{\forcemag}{f}$$\n\n$$\newcommand{\physF}{\boldsymbol{\mathfrak{f}}} %$$\n\n$$\newcommand{\physB}{\mathscr{b}} % Width of the thin film$$\n\n$$\newcommand{\physE}{{\mathpzc{E}}}$$\n\n$$\newcommand{\physh}{\mathscr{h}}$$\n\n$$\newcommand{\physe}{\mathbscr{e}}$$\n\n$$\newcommand{\physf}{\boldsymbol{\mathfrak{f}}}$$\n\n$$\newcommand{\physm}{\mathscr{m}} %$$\n\n$$\newcommand{\physu}{\mathbscr{u}}$$\n\n$$\newcommand{\physw}{\mathscr{w}}$$\n\n$$\newcommand{\rtple}[1]{\boldsymbol{#1}}$$\n\renewcommand{\u}[1]{\boldsymbol{#1}}
@@ -27,4 +23,3 @@ get_ipython().run_cell_magic('latex', '','\n$$\\newcommand{\\u}[1]{\\boldsymbol{
 
 
 get_ipython().run_cell_magic('latex', '', '\n$\\u{x}$')
-
