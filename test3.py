@@ -5,6 +5,8 @@ import os
 from os.path import dirname
 sys.path.append(os.getcwd()+"/startup")
 import initHK;
+from IPython.display import display as Echo
+from numpy import *
 
 
 # %%codecell
