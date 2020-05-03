@@ -18,24 +18,36 @@ $$
 \end{align}
 $$
 
-The above equations in the lagrangian description is
+The above equations in the eulerian description is
 $$
 \begin{align}
 \usf{v}(\usf{x},\tau)&=\usf{W}(\tau)\pr{\usf{x}-\usf{c}(\tau)}+\usf{c}'(\tau)\\
 \usf{X}(\usf{x},\tau)&=\usf{R}^{\sf T}(\tau)\pr{\usf{x}-\usf{c}(\tau)}
 \end{align}
 $$
- If $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$. Then the material particle located at $\usf{c}_0$ does not move.
 
+Is there a point (marterial particle) where that does not move?
+
+ Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
+$$
+\begin{align}
+\usf{x}(\usf{X},\tau)&=\usf{R}(\tau)\pr{\usf{X}+\usf{R}^{\sf T}(\tau)\usf{c}_0}\\
+\usf{V}(\usf{X},\tau)&=\usf{R}'(\tau)\usf{X}\\
+\usf{v}(\usf{x},\tau)&=\usf{W}(\tau)\pr{\usf{x}-\usf{c}_0}\\
+\usf{X}(\usf{x},\tau)&=\usf{R}^{\sf T}(\tau)\pr{\usf{x}-\usf{c}_0}
+\end{align}
+$$
+
+From the eulerian velocity filed we get that the material particle located at the spatial point $\usf{c}_0$ does not move.
 
 $\usf{c}(\tau)$
-Is there a point (marterial particle) where that does not move?///////
 
 
 
-# %%latex
+# %%codecell
 
-I am good
+
+cos*ov*sin-at-pi
 # %% markdown
 $$
 \newcommand{\forcemag}{f}
