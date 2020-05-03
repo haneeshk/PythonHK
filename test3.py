@@ -7,8 +7,8 @@ sys.path.append(os.getcwd()+"/startup")
 from initHK import at, ov, to;
 from IPython.display import display as Echo
 from numpy import *
-sin*hk.at*pi
-dir("at")
+sin*at*pi
+
 
 # %%codecell
 
