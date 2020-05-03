@@ -3,6 +3,9 @@
 
 
 from funcoperators import postfix as to, infix, compose as ov # composition operator
+from numpy import *
+
+
 
 
 @infix

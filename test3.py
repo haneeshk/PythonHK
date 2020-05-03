@@ -4,10 +4,11 @@ import sys
 import os
 from os.path import dirname
 sys.path.append(os.getcwd()+"/startup")
-from initHK import at, ov, to;
+# from initHK import at, ov, to;
 from IPython.display import display as Echo
-from numpy import *
-sin*at*pi
+# from numpy import *
+from initHK import *
+print(sin*at*pi)
 
 
 # %%codecell
