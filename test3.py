@@ -8,3 +8,7 @@ print(y)
 # %%markdown
 
 This is $x^2$
+
+# %%timeit
+
+(sin*ov*cos)(pi/2)
