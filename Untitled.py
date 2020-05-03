@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ##
 #
 # [Start Up script](file://Users/haneeshkesari/.ipython/profile_default/startup/00_stratup.py)
 
-# In[ ]:
+
 
 
 get_ipython().run_cell_magic('latex', '', '\n$$\\newcommand{\\u}[1]{\\boldsymbol{#1}}$$\n    \n    \n$\\u{x}$    \n    \n\\begin{equation}\nx=2\n\\end{equation}')
