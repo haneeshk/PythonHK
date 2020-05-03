@@ -11,4 +11,5 @@ This is $x^2$
 
 # %%timeit
 
-(sin*ov*cos)(pi/2)
+ans=(sin*ov*cos)(pi/2)
+print(ans)

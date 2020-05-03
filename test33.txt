@@ -3,3 +3,7 @@ y=3
 del(x)
 print(y)
 
+
+
+ans=(sin*ov*cos)(pi/2)
+print(ans)
