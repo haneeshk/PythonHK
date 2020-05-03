@@ -1,10 +1,22 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 # %% markdown
 ### Hello
 
 
+# In[5]:
+
+
 # %% codecell
 import os
-os.chdir()
+
+
+# In[7]:
+
 
 # %% codecell
 # %%timeit
@@ -13,13 +25,13 @@ for i in list-at-range(10):
     sin*ov*cos-at-(i*pi/2)
 
 
+# The idea is that $\btusf{x}$
+
+# sin*ov*cos-at-(pi/2)
+
+# In[ ]:
 
 
-
-# %% markdown
-The idea is that $\btusf{x}$
-# %% codecell
-sin*ov*cos-at-(pi/2)
 # %% markdown
 $$
 \newcommand{\forcemag}{f}
