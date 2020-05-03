@@ -6,8 +6,8 @@
 import os
 os.chdir()
 
-# %%
-%%timeit
+# %% codecell
+# %%timeit
 list-at-range(50000)
 for i in list-at-range(10):
     sin*ov*cos-at-(i*pi/2)
@@ -17,9 +17,7 @@ for i in list-at-range(10):
 
 
 # %% markdown
-
-
-The idea is that $\us
+The idea is that $\btusf{x}$
 # %% codecell
 sin*ov*cos-at-(pi/2)
 # %% markdown
