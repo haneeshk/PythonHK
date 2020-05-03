@@ -3,8 +3,9 @@
 import sys
 import os
 from os.path import dirname
-sys.path.append(os.pardir+"/startup")
-import initHK
+sys.path.append(os.getcwd()+"/startup")
+import initHK;
+
 
 # %%codecell
 
