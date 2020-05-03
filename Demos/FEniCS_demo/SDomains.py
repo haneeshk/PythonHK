@@ -1,0 +1,1 @@
+from fenics import *class LeftBoundary(SubDomain):    def inside(self, x, on_boundary):        return on_boundary and near(x[0], 0.0)class TopBoundary(SubDomain):    def inside(self, x, on_boundary):        return on_boundary and near(x[1], 0.2)

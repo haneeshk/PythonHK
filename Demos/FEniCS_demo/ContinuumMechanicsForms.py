@@ -1,0 +1,1 @@
+from MatGeoProp import mu, lambda_def epsilon(u):    return 0.5 * (nabla_grad(u) + nabla_grad(u).T)def sigma(u):    return lambda_ * nabla_div(u) * Identity(d) + 2 * mu * epsilon(u)"""s=st-(1./3)*tr(st)*Identity(d)  # deviatoric stressvon_Mises =sqrt((3./2)*inner(s,s))V = FunctionSpace(mesh, 'P', 1)von_Mises= project(von_Mises, V)"""
