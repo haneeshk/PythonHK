@@ -11,6 +11,7 @@ from initHK import *
 ### The material particle that does not move.
 The standard deformation mapping is as follows
 
+
 $$
 \begin{align}
 \usf{x}(\usf{X},\tau)&=\usf{R}(\tau)\usf{X}+\usf{c}(\tau)\\
@@ -28,6 +29,7 @@ $$
 
 Is there a point (marterial particle) where that does not move?
 
+### $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist a material particle that does not move.
 Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
 $$
 \begin{align}
@@ -41,12 +43,30 @@ $$
 From the eulerian velocity field we get that the material particle located at the spatial point $\usf{c}_0$ does not move. From the eulerian version of the deformation mapping we have that the spatial point $\usf{c}_0$ is occupied by the material particle $\usf{0}$.
 
 Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity. Using this information in the Lagrangian deformation mapping we get that the material particle $\usf{0}$ is always located at $\usf{c}_0$
+From the discussion in this section we can say that $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist material particle that does not move.
+
+###  Is $\usf{c}'(\tau)=\usf{0}$ a necessary condition for there to exist a material particle that does not move?
+
+Consider the cases when if $\usf{R}$ is presribed then $\usf{C}$ is constructed as
+$$
+\begin{equation}
+\usf{c}(\tau)&=\pr{\usf{I}-\usf{R}^{\sf T}(\tau)}\usf{C}_0
+\end{equation}
+$$
+or alternately if $\usf{c}$ is prescribed then $\usf{R}$ is constructed as
+
+
+
+
 #### If $\usf{c}'(\tau)\neq \usf{0}$ is it possible for there to exists a material particle that does not move.
 From a lagrangian description of velocity field, let $\usf{X}_0$ be the materials particle that does not move. Then we get that
 $$
 \usf{X}_0=(\usf{I}-\usf{R}(\tau))^{-1}\usf{c}(\tau)
 $$
-It is necessary that the right hand side does not depend to $\tau$. So from the above equation we can say that when $\usf{c}'(\tau)\neq\usf{0}$ in general it is not necessary that there exits a materials particle that does not move.  
+It is necessary that the right hand side does not depend to $\tau$. So from the above equation we can say that when $\usf{c}'(\tau)\neq\usf{0}$ in general it is not necessary that there exits a materials particle that does not move.
+
+If
+
  ### Rotation about a special point
 
 
