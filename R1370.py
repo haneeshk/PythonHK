@@ -8,7 +8,7 @@ from IPython.display import display as Echo
 from initHK import *
 
 # %% markdown
-### The material particle that does not move. 
+### The material particle that does not move.
 The standard deformation mapping is as follows
 
 $$
@@ -41,7 +41,7 @@ $$
 From the eulerian velocity field we get that the material particle located at the spatial point $\usf{c}_0$ does not move. From the eulerian version of the deformation mapping we have that the spatial point $\usf{c}_0$ is occupied by the material particle $\usf{0}$.
 
 Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity. Using this information in the Lagrangian deformation mapping we get that the material particle $\usf{0}$ is always located at $\usf{c}_0$
-
+## If $\usf{c}'(\tau)\neq \usf{0}$ is it possible for there to exists a material particle that does not move.
  ### Rotation about a special point
 
 
