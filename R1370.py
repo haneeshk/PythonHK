@@ -32,7 +32,7 @@ Is there a point (marterial particle) where that does not move?
 
 
 # %%markdown
-### $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist a material particle that does not move. (True)
+#### $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist a material particle that does not move. (True)
 Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
 $$
 \begin{align}
@@ -51,7 +51,7 @@ From the discussion in this section we can say that $\usf{c}'(\tau)=\usf{0}$ is 
 
 # %%markdown
 
-###  $\usf{c}'(\tau)=\usf{0}$ is a necessary condition for there to exist a material particle that does not move (ans: False)
+####  $\usf{c}'(\tau)=\usf{0}$ is a necessary condition for there to exist a material particle that does not move (ans: False)
 
 Consider the cases when if $\usf{R}$ is presribed then $\usf{c}$ is constructed as
 $$
@@ -77,8 +77,15 @@ The statement is the contrapositive of the previous claim.
 
 
 # %%markdown
+#### So, what is a necessary condition for there to exist a point that does not move?
 
-It is necessary that the right hand side does not depend to $\tau$. So from the above equation we can say that when $\usf{c}'(\tau)\neq\usf{0}$ in general it is not necessary that there exits a materials particle that does not move.
+A necessary and sufficient condition condition  that there exists a point $\usf{X}_0$ that does not move is that there exist a pont $\usf{X}$ such that
+
+$$
+(\usf{I}-\usf{R}(\tau))\usf{X}=\usf{c}(\tau)
+$$
+for all $\tau$.
+
 
 
 
@@ -149,3 +156,17 @@ $$
 \newcommand{\Dunst}{\mathcal{D}^{\otimes}}
 \newcommand{\conf}{\boldsymbol{\kappa}}
 \newcommand{\confp}{\tilde{\boldsymbol{\kappa}}}$$
+
+
+
+
+
+# %%codecell
+array
+x=
+array([[1,2,3],[4,5,6],[7,8,9]])
+[x[i,i] for i in range(3)]-to*at*sum-to*at*print;
+
+
+sin-at-[1,2,3];
+[1,2,3]-to*at*sin
