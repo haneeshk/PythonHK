@@ -41,7 +41,12 @@ $$
 From the eulerian velocity field we get that the material particle located at the spatial point $\usf{c}_0$ does not move. From the eulerian version of the deformation mapping we have that the spatial point $\usf{c}_0$ is occupied by the material particle $\usf{0}$.
 
 Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity. Using this information in the Lagrangian deformation mapping we get that the material particle $\usf{0}$ is always located at $\usf{c}_0$
-## If $\usf{c}'(\tau)\neq \usf{0}$ is it possible for there to exists a material particle that does not move.
+#### If $\usf{c}'(\tau)\neq \usf{0}$ is it possible for there to exists a material particle that does not move.
+From a lagrangian description of velocity field, let $\usf{X}_0$ be the materials particle that does not move. Then we get that
+$$
+\usf{X}_0=(\usf{I}-\usf{R}(\tau))^{-1}\usf{c}(\tau)
+$$
+It is necessary that the right hand side does not depend to $\tau$. So from the above equation we can say that when $\usf{c}'(\tau)\neq\usf{0}$ in general it is not necessary that there exits a materials particle that does not move.  
  ### Rotation about a special point
 
 
@@ -49,9 +54,11 @@ Let's see if we get the same result from the Lagrangian description. From the La
 
 
 # %%codecell
-
-
-cos*ov*sin-at-pi/2
+data={'Name':["x","y","z"],'value':[1.0,2.0,3.0]}
+import pandas as pd
+data=pd.DataFrame(data)
+display(data)
+cos*ov*sin-at-pi/2;
 # %% markdown
 $$
 \newcommand{\forcemag}{f}
