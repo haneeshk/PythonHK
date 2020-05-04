@@ -38,7 +38,10 @@ $$
 \end{align}
 $$
 
-From the eulerian velocity filed we get that the material particle located at the spatial point $\usf{c}_0$ does not move.
+From the eulerian velocity field we get that the material particle located at the spatial point $\usf{c}_0$ does not move. From the eulerian version of the deformation mapping we have that the spatial point $\usf{c}_0$ is occupied by the material particle $\usf{0}$.
+
+Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity. 
+
 
 $\usf{c}(\tau)$
 
