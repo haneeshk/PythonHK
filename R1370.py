@@ -28,7 +28,7 @@ $$
 
 Is there a point (marterial particle) where that does not move?
 
- Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
+Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
 $$
 \begin{align}
 \usf{x}(\usf{X},\tau)&=\usf{R}(\tau)\pr{\usf{X}+\usf{R}^{\sf T}(\tau)\usf{c}_0}\\
@@ -40,17 +40,17 @@ $$
 
 From the eulerian velocity field we get that the material particle located at the spatial point $\usf{c}_0$ does not move. From the eulerian version of the deformation mapping we have that the spatial point $\usf{c}_0$ is occupied by the material particle $\usf{0}$.
 
-Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity. 
+Let's see if we get the same result from the Lagrangian description. From the Lagrangian velocity field we have that the material particle $\usf{0}$ always has zero velocity.
 
 
-$\usf{c}(\tau)$
+
 
 
 
 # %%codecell
 
 
-cos*ov*sin-at-pi
+cos*ov*sin-at-pi/2
 # %% markdown
 $$
 \newcommand{\forcemag}{f}
