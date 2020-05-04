@@ -32,7 +32,7 @@ Is there a point (marterial particle) where that does not move?
 
 
 # %%markdown
-### $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist a material particle that does not move.
+### $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist a material particle that does not move. (True)
 Let us consider the case $\usf{c}'(\tau)$ is $\usf{0}$, i.e., $\usf{c}(\tau)=\usf{c}_0$.
 $$
 \begin{align}
@@ -50,6 +50,7 @@ Let's see if we get the same result from the Lagrangian description. From the La
 From the discussion in this section we can say that $\usf{c}'(\tau)=\usf{0}$ is a sufficient condition for there to exist material particle that does not move.
 
 # %%markdown
+
 ###  $\usf{c}'(\tau)=\usf{0}$ is a necessary condition for there to exist a material particle that does not move (ans: False)
 
 Consider the cases when if $\usf{R}$ is presribed then $\usf{c}$ is constructed as
@@ -65,7 +66,13 @@ Clearly, $\usf{c}'(\tau)\neq=\usf{0}$, since it is equal to $-\usf{R}'(\tau)\usf
 
 
 # %%markdown
+
 #### If $\usf{c}'(\tau)\neq \usf{0}$ then there does not  exist a material particle that does not move. (ans False)
+
+The statement is the contrapositive of the previous claim.
+
+
+
 
 
 
@@ -73,9 +80,9 @@ Clearly, $\usf{c}'(\tau)\neq=\usf{0}$, since it is equal to $-\usf{R}'(\tau)\usf
 
 It is necessary that the right hand side does not depend to $\tau$. So from the above equation we can say that when $\usf{c}'(\tau)\neq\usf{0}$ in general it is not necessary that there exits a materials particle that does not move.
 
-If
 
- ### Rotation about a special point
+
+
 
 
 
