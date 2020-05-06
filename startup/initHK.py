@@ -4,7 +4,7 @@
 
 from funcoperators import postfix as to, infix, compose as ov # composition operator
 from numpy import *
-
+from functional_notations import _F as _f, F as f
 
 
 
