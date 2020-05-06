@@ -164,4 +164,6 @@ $$
 # %%codecell
 
 
-1.
+names=['John', 'James','Bill']
+f@list@map(lambda x: x+' smith',names)
+lase

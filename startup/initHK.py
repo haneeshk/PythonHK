@@ -2,9 +2,12 @@
 # coding: utf-8
 
 
+
+
+
+# %codecell
 from funcoperators import postfix as to, infix, compose as ov # composition operator
 from numpy import *
-from functional_notations import _F as _f, F as f
 
 
 
@@ -15,7 +18,8 @@ def at(func, arg):                          # evaluate at operator
 
 
 
-
+from functional_notations import _F as _f, F as f
+# for demo see Demos/functional_notation_demo.py
 
 
 if __name__ == '__main__':
