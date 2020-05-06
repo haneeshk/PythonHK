@@ -26,3 +26,14 @@ This is $x^2$
 
 ans=(sin*ov*cos)(pi/2)
 print(ans)
+
+
+# %%codecell
+
+a=2.0;
+b=a;
+b=3.0;
+print(a)
+
+
+from functional_notations import _f,
