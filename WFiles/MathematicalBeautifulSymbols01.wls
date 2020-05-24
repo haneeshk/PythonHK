@@ -1,0 +1,6 @@
+2+2
+
+
+SuperscriptˍjˍˍBolfˍSansˍNˍˍSubscriptˍi=2.3
+
+SuperscriptˍjˍˍBolfˍSansˍNˍˍSubscriptˍi
