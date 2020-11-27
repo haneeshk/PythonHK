@@ -1,4 +1,12 @@
 from IPython.display import display, Math
+from typing import List, Set, Dict, Tuple, Optional
+x: List[int] =[1,2]
+def d(x:List[int])->int:
+    print(x[0])
+    return
+
+
+
 from classX import X
 X1=X(1,2,3)
 X1.print()
@@ -46,8 +54,13 @@ class X:
 def funTensor(a: X)->float:
     return   a.a
 
-funTensor(22.0)
+funTensor(X1)
 
+X2=X1.copy()
+
+X1.a
+X2.a
+X2.a=3.0
 greeting("Haneesh")
 
 def greeting(name: str) -> str:
