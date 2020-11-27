@@ -1,14 +1,14 @@
 from IPython.display import display, Math
 class X:
-    a = 0.0
-    b = 0.0
-    c = 0.0
+    __data = []
 
     def __init__(self, ain, bin, cin):
-        self.a = ain
-        self.b = bin
-        self.c = cin
+        self.__data = [ain,bin,cin]
+    def __getitem__(self,i: int) -> float:
+        if i<1 or i>3:
+            raise IndexError("Index out of bounds")
+        return self.__data[i-1]
 
     def print(self):
-        d="\\left(\\begin{align}"+str(self.a)+"\\\\"+str(self.b)+"\\\\"+str(self.c)+"\\end{align}\\right)"
+        d="\\left(\\begin{align}"+str(self.__data[0])+"\\\\"+str(self.__data[1])+"\\\\"+str(self.__data[2])+"\\end{align}\\right)"
         display(Math(d))
