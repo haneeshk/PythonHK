@@ -1,6 +1,7 @@
 from IPython.display import display, Math
 from typing import List, Set, Dict, Tuple, Optional
 x: List[int] =[1,2]
+
 def d(x:List[int])->int:
     print(x[0])
     return
