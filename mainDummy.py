@@ -1,3 +1,4 @@
+
 from IPython.display import display, Math
 from typing import List, Set, Dict, Tuple, Optional
 x: List[int] =[1,2]
@@ -5,6 +6,24 @@ x: List[int] =[1,2]
 def d(x:List[int])->int:
     print(x[0])
     return
+
+class SkewMat(object):
+    """docstring for SkewMat."""
+
+    def __init__(self, arg):
+        super(SkewMat, self).__init__()
+        self.arg = arg
+
+
+z=SkewMat(22.0)
+
+def dd(x: SkewMat)->int:
+     return x.arg
+
+dd(SkewMat(23.0))
+
+y: List[int] =[ x**2 for x in range (10)   ]
+
 
 
 funTensor("hello")
