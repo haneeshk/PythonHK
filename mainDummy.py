@@ -9,6 +9,9 @@ import mypy
 ! pip install mypy
 x = dummy.func1(22.0)
 x
+! python3 -m pip install -U mypy typed-ast
+
+?X
 
 
 x = func1(22)
@@ -40,5 +43,12 @@ class X:
 
 
 
-funTensor(a:X)->double:
+def funTensor(a: X)->float:
     return   a.a
+
+funTensor(22.0)
+
+greeting("Haneesh")
+
+def greeting(name: str) -> str:
+    return 'Hello ' + name
