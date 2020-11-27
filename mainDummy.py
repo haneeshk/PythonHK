@@ -1,7 +1,16 @@
 
 from IPython.display import display, Math
 from typing import List, Set, Dict, Tuple, Optional
-x: List[int] =[1,2]
+import numpy as np
+list(map(lambda a : a + 10 , x))
+
+x: List[int] =[3,2]
+x.sort()
+x
+
+x.insert(1, z)
+import const
+const.magic=22.0
 
 def d(x:List[int])->int:
     print(x[0])
@@ -31,6 +40,10 @@ funTensor("hello")
 
 from classX import X
 X1=X(1,2,3)
+for i inx range(3):
+  print X1[2]
+
+
 X1.print()
 d="\\left(\\begin{align}"+str(X1.a)+"\\\\"+str(X1.b)+"\\\\"+str(X1.c)+"\\end{align}\\right)"
 display(Math(d))
