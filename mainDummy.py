@@ -1,4 +1,10 @@
-import dummy
+from IPython.display import display, Math
+from classX import X
+X1=X(1,2,3)
+X1.print()
+d="\\left(\\begin{align}"+str(X1.a)+"\\\\"+str(X1.b)+"\\\\"+str(X1.c)+"\\end{align}\\right)"
+display(Math(d))
+X1.print()
 import mypy
 ! pip install mypy
 x = dummy.func1(22.0)
