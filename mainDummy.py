@@ -1,5 +1,6 @@
 import dummy
-
+import mypy
+! pip install mypy
 x = dummy.func1(22.0)
 x
 
@@ -13,8 +14,11 @@ X1.b = 0.3
 X1.c = 0.5
 X1.print()
 X1.a
-
-
+txte = r"The \emph{characteristic polynomial} $\chi(\lambda)$ of the $3 \times 3$~matrix \\ $\left( \begin{array}{ccc} a & b & c \\ d & e & f \\g & h & i \end{array} \right) $ \\is given by the formula\\ $ \chi(\lambda) = \left| \begin{array}{ccc} \lambda - a & -b & -c \\ -d & \lambda - e & -f \\ -g & -h & \lambda - i \end{array} \right|. $"
+print(txte)
+from IPython.display import display, Math
+display(Math(r'$x^2$'))
+display(Math(r'$$\mathcal{x}$$'))
 class X:
     a = 0.0
     b = 0.0
@@ -26,4 +30,9 @@ class X:
         self.c = cin
 
     def print(self):
-        print("(", self.a, r"\frac{x}{y}", self.b, ",", self.c, ",", ")")
+        display(Math("(", self.a, r"\frac{x}{y}", self.b, ",", self.c, ",", ")"))
+
+
+
+funTensor(a:X)->double:
+    return   a.a
