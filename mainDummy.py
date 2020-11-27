@@ -6,6 +6,8 @@ def d(x:List[int])->int:
     return
 
 
+funTensor("hello")
+
 
 from classX import X
 X1=X(1,2,3)
@@ -36,6 +38,7 @@ print(txte)
 from IPython.display import display, Math
 display(Math(r'$x^2$'))
 display(Math(r'$$\mathcal{x}$$'))
+
 class X:
     a = 0.0
     b = 0.0
