@@ -1,13 +1,24 @@
-
 from IPython.display import display, Math
 from typing import List, Set, Dict, Tuple, Optional
 import numpy as np
 list(map(lambda a : a + 10 , x))
+np.sinc
+
+
+x=np.array([[1,2,3],[4,5,6],[7,8,9]])
+np.trace(x)
+
+
+
+np.transpose(x)
+def e: SkewMat -> OrthoMat:
+
 
 x: List[int] =[3,2]
+x.
 x.sort()
 x
-
+X2
 x.insert(1, z)
 import const
 const.magic=22.0
@@ -33,13 +44,15 @@ dd(SkewMat(23.0))
 
 y: List[int] =[ x**2 for x in range (10)   ]
 
-
+y
 
 funTensor("hello")
 
 
 from classX import X
 X1=X(1,2,3)
+
+
 for i inx range(3):
   print X1[2]
 
@@ -52,13 +65,8 @@ import mypy
 ! pip install mypy
 x = dummy.func1(22.0)
 x
-! python3 -m pip install -U mypy typed-ast
-
-?X
 
 
-x = func1(22)
-print(x)
 
 X1 = X(0.2, 0.2, 0.3)
 X1.a = 0.2
