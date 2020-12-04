@@ -11,15 +11,27 @@ class YoungsModulus():
     def __init__(self,value,units=__units__):
         self.__value__=value
         self.__units__=units
-    def value(self)
+    def value(self):
         return self.__value__
 
 
 YM=YoungsModulus(10,"MPa")
 YM2=YoungsModulus(10)
 
-YM2.__value__
-YM2.__units__
+def CreateConstant(Value):
+    f=lambda x : Value
+
+def YM(x : str):
+    if x is "value":
+        return 22.0
+    elif x is "units":
+        return "KPa"
+    return "0"
+
+YM("value")
+
+
+wYM2.__units__
 from IPython.display import display as Echo
 from numpy import *
 import numpy as np
