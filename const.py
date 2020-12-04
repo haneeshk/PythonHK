@@ -6,15 +6,20 @@ MatConstantsKeys
 
 
 class YoungsModulus():
-    __value__
-    __units__
-    def __init__(self,value,units="KPa"):
-        __value__=value
-        __units__=units
+    __value__=0.0
+    __units__="KPa"
+    def __init__(self,value,units=__units__):
+        self.__value__=value
+        self.__units__=units
+    def value(self)
+        return self.__value__
 
 
+YM=YoungsModulus(10,"MPa")
+YM2=YoungsModulus(10)
 
-
+YM2.__value__
+YM2.__units__
 from IPython.display import display as Echo
 from numpy import *
 import numpy as np
