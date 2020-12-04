@@ -18,8 +18,23 @@ class YoungsModulus():
 YM=YoungsModulus(10,"MPa")
 YM2=YoungsModulus(10)
 
-def CreateConstant(Value):
-    f=lambda x : Value
+def CreateConstant(Value,Unit="ND"):
+    return lambda x=0 :  Unit if x is "units" else Value
+
+ν=CreateConstant(0.3)
+E=CreateConstant(220,"KPa")
+ν()
+ν("units")
+ν("units")
+
+ν("Value")*E("Value")
+E("value")
+
+
+E=22.0
+
+E()=33
+
 
 def YM(x : str):
     if x is "value":
