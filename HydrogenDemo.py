@@ -91,8 +91,10 @@ $$
 
 
 $
-\epsilon_{\rm max}= \{ \epsilon{\usf{x}}~|~x\in \mathcal{B}\}
+\epsilon_{\rm max}= \{ \epsilon\, \usf{x}~|~x\in \mathcal{B}\}
 $
+
+
 # %% codecell
 sin(pi)-to*at*print
 # %% codecell

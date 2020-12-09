@@ -1,6 +1,7 @@
 
 
 X_1=1
+List
 
 x_1=(i for i in range(3))
 x_1=tuple(x_1)
@@ -21,7 +22,10 @@ xᵤ=2
 
 ᵃxᵤᵥₓ=22.2
 ⁱxᵢ=1
+ˡxᵢ
 ʲyⱼ
+ₖxʲₖ=22.0
+ₖxʲₖ
 u"\x2096"
 𝗔ᵢ=2
 
@@ -73,10 +77,35 @@ YM=YoungsModulus(10,"MPa")
 YM2=YoungsModulus(10)
 
 def CreateConstant(Value,Unit="ND"):
-    return lambda x=0 :  Unit if x is "units" else Valuerest
+    return lambda x=0 :  Unit if x is "units" else Value
+
+a=1.0
+a=2.0
 
 ν=CreateConstant(0.3)
 E=CreateConstant(220,"KPa")
+E()
+numba
+from numba import jit
+import random
+#%%
+%timeit
+@jit(nopython=True)
+def monte_carlo_pi(nsamples):
+    acc = 0
+    for i in range(nsamples):
+        x = random.random()
+        y = random.random()
+        if (x ** 2 + y ** 2) < 1.0:
+            acc += 1
+    return 4.0 * acc / nsamples
+
+#%%
+%timeit
+monte_carlo_pi(100)
+
+
+#%%
 ν()
 ν("units")
 ν("units")
