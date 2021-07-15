@@ -1,0 +1,1154 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " extern crate ndarray;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let x=ndarray::prelude::Array::linspace(0., 10., 11);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fn clear(x: &mut f32){}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let y=ndarray::prelude::arr2(&[[1.0,2.0],[3.0,4.0]]);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[1.0, 2.0],\n",
+       " [3.0, 4.0]], shape=[2, 2], strides=[2, 1], layout=Cc (0x5), const ndim=2"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[3.0, 4.0], shape=[2], strides=[1], layout=CFcf (0xf), const ndim=1"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y.t().dot(&x.slice(s![..2]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "use ndarray::prelude::*;\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "for xi in x {println!(\"{}\",xi);};"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let x:f32=0.25;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.25"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "let m=x."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "unused variable: `x`",
+     "output_type": "error",
+     "traceback": [
+      "",
+      "unused variable: `x`",
+      "\u001b[1mhelp\u001b[0m: if this is intentional, prefix it with an underscore\n\n_x"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "cannot borrow `x` as mutable, as it is not declared as mutable",
+     "output_type": "error",
+     "traceback": [
+      "clear(&mut x)",
+      "\u001b[91m      ^^^^^^\u001b[0m \u001b[94mcannot borrow as mutable\u001b[0m",
+      "cannot borrow `x` as mutable, as it is not declared as mutable",
+      "\u001b[1mhelp\u001b[0m: consider changing this to be mutable\n\nmut x"
+     ]
+    }
+   ],
+   "source": [
+    "clear(&mut x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let x=Box::<f32>::new(0.35);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "// println!(\"{}\",x);\n",
+    "std::mem::drop(x);\n",
+    "// println!(\"{}\",x);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "this function takes 0 arguments but 1 argument was supplied",
+     "output_type": "error",
+     "traceback": [
+      "x.into(z)",
+      "\u001b[91m       ^\u001b[0m \u001b[94msupplied 1 argument\u001b[0m",
+      "x.into(z)",
+      "\u001b[91m  ^^^^\u001b[0m \u001b[94mexpected 0 arguments\u001b[0m",
+      "this function takes 0 arguments but 1 argument was supplied"
+     ]
+    }
+   ],
+   "source": [
+    "x.into(z)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let mut  z: f32=0.2; "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.25\n",
+      "y is 0.35\n",
+      "0.35\n",
+      "x is 0.25\n",
+      "0.6\n",
+      "0.6\n"
+     ]
+    }
+   ],
+   "source": [
+    "let mut z: f32=0.0;\n",
+    "{let mut x: f32= 0.25;\n",
+    "println!(\"{}\",x);\n",
+    "\n",
+    "{let mut y=  x;\n",
+    "    y=y+0.1_f32;\n",
+    "        println!(\"y is {}\",y);\n",
+    "\n",
+    "// x=x+0.2;\n",
+    " \n",
+    "     z+=y;\n",
+    "    println!(\"{}\",z);\n",
+    "    };\n",
+    "            println!(\"x is {}\",x);\n",
+    "    z+=x;\n",
+    "    println!(\"{}\",z);\n",
+    "};\n",
+    "    println!(\"{}\",z);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "struct EP {\n",
+    "    YoungModulys: f32,\n",
+    "        PoissonRatio: f32,\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let mut BaseProp=EP {YoungModulys: 10000.,        PoissonRatio: 0.2};"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "`EP` doesn't implement `Debug`",
+     "output_type": "error",
+     "traceback": [
+      "println!(\"{:?}\",BaseProp);",
+      "\u001b[91m                ^^^^^^^^\u001b[0m \u001b[94m`EP` cannot be formatted using `{:?}`\u001b[0m",
+      "`EP` doesn't implement `Debug`",
+      "\u001b[1mhelp\u001b[0m: the trait `Debug` is not implemented for `EP`"
+     ]
+    }
+   ],
+   "source": [
+    "println!(\"{:?}\",BaseProp);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "extern crate plotters;\n",
+    "use plotters::prelude::*;\n",
+    "fn main() -> Result<(), Box<dyn std::error::Error>> {\n",
+    "    let root = BitMapBackend::new(\"plotters-doc-data/0.png\", (640, 480)).into_drawing_area();\n",
+    "    root.fill(&WHITE)?;\n",
+    "    let mut chart = ChartBuilder::on(&root)\n",
+    "        .caption(\"y=x^2\", (\"Arial\", 50).into_font())\n",
+    "        .margin(5)\n",
+    "        .x_label_area_size(30)\n",
+    "        .y_label_area_size(30)\n",
+    "        .build_ranged(-1f32..1f32, -0.1f32..1f32)?;\n",
+    "\n",
+    "    chart.configure_mesh().draw()?;\n",
+    "\n",
+    "    chart\n",
+    "        .draw_series(LineSeries::new(\n",
+    "            (-50..=50).map(|x| x as f32 / 50.0).map(|x| (x, x * x)),\n",
+    "            &RED,\n",
+    "        ))?\n",
+    "        .label(\"y = x^2\")\n",
+    "        .legend(|(x, y)| Path::new(vec![(x, y), (x + 20, y)], &RED));\n",
+    "\n",
+    "    chart\n",
+    "        .configure_series_labels()\n",
+    "        .background_style(&WHITE.mix(0.8))\n",
+    "        .border_style(&BLACK)\n",
+    "        .draw()?;\n",
+    "\n",
+    "    Ok(())\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "cannot find value `figure` in this scope",
+     "output_type": "error",
+     "traceback": [
+      "figure",
+      "\u001b[91m^^^^^^\u001b[0m \u001b[94mnot found in this scope\u001b[0m",
+      "cannot find value `figure` in this scope"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "use of deprecated type alias `plotters::element::Path`: Use new name PathElement instead",
+     "output_type": "error",
+     "traceback": [
+      "",
+      "use of deprecated type alias `plotters::element::Path`: Use new name PathElement instead"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "use of deprecated associated function `plotters::chart::ChartBuilder::<'a, 'b, DB>::build_ranged`: `build_ranged` has been renamed to `build_cartesian_2d` and is to be removed in the future.",
+     "output_type": "error",
+     "traceback": [
+      "",
+      "use of deprecated associated function `plotters::chart::ChartBuilder::<'a, 'b, DB>::build_ranged`: `build_ranged` has been renamed to `build_cartesian_2d` and is to be removed in the future."
+     ]
+    }
+   ],
+   "source": [
+    "figure"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "expected type, found `0.0`",
+     "output_type": "error",
+     "traceback": [
+      "        (f32,0.0..=50.0).map(|&x| x as f64 / 50.0).map(|x| (x, x * x)),",
+      "\u001b[91m             ^^^\u001b[0m \u001b[94mexpected type\u001b[0m",
+      "expected type, found `0.0`",
+      "\u001b[1mhelp\u001b[0m: maybe write a path separator here\n\n::"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "unresolved import `ndarray::ArrayBase`",
+     "output_type": "error",
+     "traceback": [
+      "`ArrayBase` is a struct, not a module",
+      "unresolved import `ndarray::ArrayBase`"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "use of deprecated type alias `plotters::element::Path`: Use new name PathElement instead",
+     "output_type": "error",
+     "traceback": [
+      "",
+      "use of deprecated type alias `plotters::element::Path`: Use new name PathElement instead"
+     ]
+    }
+   ],
+   "source": [
+    ":dep plotters = { git = \"https://github.com/38/plotters\", default_features = false, features = [\"evcxr\"] }\n",
+    "extern crate plotters;\n",
+    "use plotters::prelude::*;\n",
+    "use plotters::element::Path;\n",
+    "use plotters::*;\n",
+    "use plotters::series;\n",
+    "use ndarray::ArrayBase::*;\n",
+    "\n",
+    "let figure = evcxr_figure((640, 480), |root| {\n",
+    "    root.fill(&WHITE);\n",
+    "    let mut chart = ChartBuilder::on(&root)\n",
+    "        .caption(\"y=x^2\", (\"Arial\", 50).into_font())\n",
+    "        .margin(5)\n",
+    "        .x_label_area_size(30)\n",
+    "        .y_label_area_size(30)\n",
+    "        .build_cartesian_2d(-1f32..1f32, -0.1f32..1f32)?;\n",
+    "\n",
+    "    chart.configure_mesh().draw()?;\n",
+    "\n",
+    "    chart.draw_series(plotters:series::LineSeries::<f64>::new(\n",
+    "        (f32,0.0..=50.0).map(|&x| x as f64 / 50.0).map(|x| (x, x * x)),\n",
+    "        &RED,\n",
+    "    )).unwrap()\n",
+    "        .label(\"y = x^2\")\n",
+    "        .legend(|(x,y)| PathElement::new(vec![(x,y), (x + 20,y)], &RED));\n",
+    "\n",
+    "    chart.configure_series_labels()\n",
+    "        .background_style(&WHITE.mix(0.8))\n",
+    "        .border_style(&BLACK)\n",
+    "        .draw()?;\n",
+    "    Ok(())\n",
+    "});\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "the method `map` exists for struct `RangeInclusive<{float}>`, but its trait bounds were not satisfied",
+     "output_type": "error",
+     "traceback": [
+      "(0.0..=0.2).map(|x| x*x)",
+      "\u001b[91m            ^^^\u001b[0m \u001b[94mmethod cannot be called on `RangeInclusive<{float}>` due to unsatisfied trait bounds\u001b[0m",
+      "the method `map` exists for struct `RangeInclusive<{float}>`, but its trait bounds were not satisfied"
+     ]
+    }
+   ],
+   "source": [
+    "(0.0..=0.2).map(|x| x*x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "use ndarray::prelude::*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let x=Array::linspace(0.0, 1.0, 10);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0.0, 0.1111111111111111, 0.2222222222222222, 0.3333333333333333, 0.4444444444444444, 0.5555555555555556, 0.6666666666666666, 0.7777777777777777, 0.8888888888888888, 1.0], shape=[10], strides=[1], layout=CFcf (0xf), const ndim=1"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "extern crate plotlib;\n",
+    "use plotlib::page::Page;\n",
+    "use plotlib::repr::Plot;\n",
+    "use plotlib::view::ContinuousView;\n",
+    "use plotlib::style::{PointMarker, PointStyle};\n",
+    "\n",
+    "fn main() {\n",
+    "    // Scatter plots expect a list of pairs\n",
+    "    let data1 = vec![\n",
+    "        (-3.0, 2.3),\n",
+    "        (-1.6, 5.3),\n",
+    "        (0.3, 0.7),\n",
+    "        (4.3, -1.4),\n",
+    "        (6.4, 4.3),\n",
+    "        (8.5, 3.7),\n",
+    "    ];\n",
+    "\n",
+    "    // We create our scatter plot from the data\n",
+    "    let s1: Plot = Plot::new(data1).point_style(\n",
+    "        PointStyle::new()\n",
+    "            .marker(PointMarker::Square) // setting the marker to be a square\n",
+    "            .colour(\"#DD3355\"),\n",
+    "    ); // and a custom colour\n",
+    "\n",
+    "    // We can plot multiple data sets in the same view\n",
+    "    let data2 = vec![(-1.4, 2.5), (7.2, -0.3)];\n",
+    "    let s2: Plot = Plot::new(data2).point_style(\n",
+    "        PointStyle::new() // uses the default marker\n",
+    "            .colour(\"#35C788\"),\n",
+    "    ); // and a different colour\n",
+    "\n",
+    "    // The 'view' describes what set of data is drawn\n",
+    "    let v = ContinuousView::new()\n",
+    "        .add(s1)\n",
+    "        .add(s2)\n",
+    "        .x_range(-5., 10.)\n",
+    "        .y_range(-2., 6.)\n",
+    "        .x_label(\"Some varying variable\")\n",
+    "        .y_label(\"The response of something\");\n",
+    "\n",
+    "    // A page with a single view is then saved to an SVG file\n",
+    "    Page::single(&v).save(\"scatter.svg\").unwrap()\n",
+    "}\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "cannot find value `v` in this scope",
+     "output_type": "error",
+     "traceback": [
+      "v",
+      "\u001b[91m^\u001b[0m \u001b[94m\u001b[0m",
+      "cannot find value `v` in this scope",
+      "\u001b[1mhelp\u001b[0m: a local variable with a similar name exists\n\nx"
+     ]
+    }
+   ],
+   "source": [
+    "v"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "this struct takes 2 type arguments but only 1 type argument was supplied",
+     "output_type": "error",
+     "traceback": [
+      "ArrayBase::<f64>::linspace(0.0,50.0,100)",
+      "\u001b[91m^^^^^^^^^\u001b[0m \u001b[94mexpected 2 type arguments\u001b[0m",
+      "ArrayBase::<f64>::linspace(0.0,50.0,100)",
+      "\u001b[91m            ^^^\u001b[0m \u001b[94msupplied 1 type argument\u001b[0m",
+      "this struct takes 2 type arguments but only 1 type argument was supplied",
+      "\u001b[1mhelp\u001b[0m: add missing type argument\n\n, D"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "the trait bound `f64: RawData` is not satisfied",
+     "output_type": "error",
+     "traceback": [
+      "ArrayBase::<f64>::linspace(0.0,50.0,100)",
+      "\u001b[91m^^^^^^^^^^^^^^^^\u001b[0m \u001b[94mthe trait `RawData` is not implemented for `f64`\u001b[0m",
+      "the trait bound `f64: RawData` is not satisfied"
+     ]
+    }
+   ],
+   "source": [
+    "ArrayBase::<f64>::linspace(0.0,50.0,100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(0.0, 0.0), (0.02, 0.0004), (0.04, 0.0016), (0.06, 0.0036), (0.08, 0.0064), (0.1, 0.010000000000000002), (0.12, 0.0144), (0.14, 0.019600000000000003), (0.16, 0.0256), (0.18, 0.0324), (0.2, 0.04000000000000001)], shape=[11], strides=[1], layout=CFcf (0xf), const ndim=1"
+      ]
+     },
+     "execution_count": 44,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Array::linspace(0., 10., 11).map(|&x| x as f64 / 50.0).map(|x| (x, x * x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let mut x=Array::linspace(0.0, 10.0, 11);"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0.0, 23.5, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0], shape=[11], strides=[1], layout=CFcf (0xf), const ndim=1"
+      ]
+     },
+     "execution_count": 63,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x[1]=23.5;\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x.mapv_inplace(|x| x.sin())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0.0, -0.9980820279793963, 0.9092974268256817, 0.1411200080598672, -0.7568024953079282, -0.9589242746631385, -0.27941549819892586, 0.6569865987187891, 0.9893582466233818, 0.4121184852417566, -0.5440211108893699], shape=[11], strides=[1], layout=CFcf (0xf), const ndim=1"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "let xx= Array2::from"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let mut m=arr2(&[[1.,2.,3.], [4.,5.,6.]]);\n",
+    "// for i in 0..2{\n",
+    "//     for j in 0..3\n",
+    "//     {\n",
+    "//         println!(\"{}\",m[[i,j]]);\n",
+    "//         m[[i,j]]= (i as f64)+(j as f64);\n",
+    "//     }\n",
+    "// }"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(0,0)(0,1)(0,2)\n",
+      "(1,0)(1,1)(1,2)\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 91,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "for i in 0..m.shape()[0]{\n",
+    "    for j in 0..m.shape()[1]{\n",
+    "    print!(\"({},{})\",i,j);\n",
+    "}\n",
+    "    println!(\"\");\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "let m1=m.mapv(|x| x.sin()).mapv(|x| x.cos());"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 140,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[0.0, 1.0, 2.0],\n",
+       " [1.0, 2.0, 3.0]], shape=[2, 3], strides=[3, 1], layout=Cc (0x5), const ndim=2"
+      ]
+     },
+     "execution_count": 140,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 107,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[0.0, 0.0, 0.0],\n",
+       " [0.4546487134128409, 0.4546487134128409, 0.4546487134128409]], shape=[2, 3], strides=[3, 1], layout=Cc (0x5), const ndim=2"
+      ]
+     },
+     "execution_count": 107,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "1\n",
+      "1\n",
+      "0.9051147710809189\n",
+      "0.9051147710809189\n",
+      "0.9051147710809189\n"
+     ]
+    }
+   ],
+   "source": [
+    "for x in &m {println!(\"{}\",x.sin().cos());};"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 2]>>` doesn't implement `Debug`",
+     "output_type": "error",
+     "traceback": [
+      "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 2]>>` cannot be formatted using `{:?}` because it doesn't implement `Debug`",
+      "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 2]>>` doesn't implement `Debug`",
+      "\u001b[1mhelp\u001b[0m: the trait `Debug` is not implemented for `ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 2]>>`"
+     ]
+    }
+   ],
+   "source": [
+    "m.iter()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 144,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "m[[0,0]] = 1\tm[[1,0]] = 2\t\n",
+      "m[[0,1]] = 3\tm[[1,1]] = 4\t\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 144,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "for (I, x) in m.iter().enumerate() {\n",
+    "    let (i,j):(usize,usize)=(I % m.shape()[0],I / m.shape()[0]);\n",
+    "    if i==0 {\n",
+    "        println!(\"\");\n",
+    "//         print!(\"m[[{},{}]] = {}\", i,j, x);\n",
+    "    }     print!(\"m[[{},{}]] = {}\\t\", i,j, x);\n",
+    "\n",
+    "\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 147,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "`m` does not live long enough",
+     "output_type": "error",
+     "traceback": [
+      "let m3=m.iter();",
+      "\u001b[91m       ^\u001b[0m \u001b[94mborrowed value does not live long enough\u001b[0m",
+      "let m3=m.iter();",
+      "\u001b[91m       ^^^^^^^^\u001b[0m \u001b[94margument requires that `m` is borrowed for `'static`\u001b[0m",
+      "`m` does not live long enough"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "cannot move out of `m` because it is borrowed",
+     "output_type": "error",
+     "traceback": [
+      "let m3=m.iter();",
+      "\u001b[91m       ^\u001b[0m \u001b[94mborrow of `m` occurs here\u001b[0m",
+      "let m3=m.iter();",
+      "\u001b[91m       ^^^^^^^^\u001b[0m \u001b[94margument requires that `m` is borrowed for `'static`\u001b[0m",
+      "cannot move out of `m` because it is borrowed"
+     ]
+    }
+   ],
+   "source": [
+    "let m3=m.iter();\n",
+    "// m.iter().enumerate().for_each((i,x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 115,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "m.shape()[0]*i+j="
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " extern crate ndarray;\n",
+    "use ndarray::prelude::*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 122,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "i"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "expected identifier, found keyword `type`",
+     "output_type": "error",
+     "traceback": [
+      "iter.type()",
+      "\u001b[91m     ^^^^\u001b[0m \u001b[94mexpected identifier, found keyword\u001b[0m",
+      "expected identifier, found keyword `type`",
+      "\u001b[1mhelp\u001b[0m: you can escape reserved keywords to use them as identifiers\n\nr#type"
+     ]
+    },
+    {
+     "ename": "Error",
+     "evalue": "no method named `r#type` found for struct `Map<std::iter::Zip<ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>, ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>>, [closure@src/lib.rs:143:40: 143:55]>` in the current scope",
+     "output_type": "error",
+     "traceback": [
+      "iter.type()",
+      "\u001b[91m     ^^^^\u001b[0m \u001b[94mmethod not found in `Map<std::iter::Zip<ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>, ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>>, [closure@src/lib.rs:143:40: 143:55]>`\u001b[0m",
+      "no method named `r#type` found for struct `Map<std::iter::Zip<ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>, ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>>, [closure@src/lib.rs:143:40: 143:55]>` in the current scope"
+     ]
+    }
+   ],
+   "source": [
+    "let mut it2:ndarray::iter::Iter<'_, f64, Dim<[usize; 1]>>;\n",
+    "{let  x=Array::linspace(0.0,3.14/2.0,10);\n",
+    "let  y=x.mapv(f64::sin);\n",
+    "// let mut y=Array::linspace(-0.2,0.2, 10);\n",
+    "let iter = x.iter().zip( y.iter()).map(|(x, y)| (x, y));\n",
+    "for (x1,x2) in iter {\n",
+    "    println!(\"({},{})\",x1,x2);\n",
+    "    };\n",
+    "iter.type()\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 153,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "Error",
+     "evalue": "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>` doesn't implement `Debug`",
+     "output_type": "error",
+     "traceback": [
+      "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>` cannot be formatted using `{:?}` because it doesn't implement `Debug`",
+      "`ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>` doesn't implement `Debug`",
+      "\u001b[1mhelp\u001b[0m: the trait `Debug` is not implemented for `ndarray::iter::Iter<'_, f64, ndarray::Dim<[usize; 1]>>`"
+     ]
+    }
+   ],
+   "source": [
+    "x.iter()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fn test(){\n",
+    "println!(\"Demo to show zip function working in rust programming !!!\");\n",
+    "let itr1 = [100, 200, 300, 400, 500, 600];\n",
+    "let itr2 = [10 , 20, 30, 40, 50 ,60];\n",
+    "let itr3 = [1, 2, 3, 4 ,5 , 6];\n",
+    "let iter = itr1.iter()\n",
+    ".zip( itr2.iter())\n",
+    ".zip( itr3.iter())\n",
+    ".map(|((x, y), z)| (x, y, z));\n",
+    "println!(\"Printing the iterator object !!!!\");\n",
+    "println!(\"{:?}\", iter);\n",
+    "println!(\"Now we are trying to see the tuple values inside the newly created iterator object using zip in rust !! ::\");\n",
+    "for (itr1, itr2, itr3) in iter {\n",
+    "println!(\"{} {} {}\", itr1, itr2, itr3);\n",
+    "    }\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Demo to show zip function working in rust programming !!!\n",
+      "Printing the iterator object !!!!\n",
+      "Map { iter: Zip }\n",
+      "Now we are trying to see the tuple values inside the newly created iterator object using zip in rust !! ::\n",
+      "100 10 1\n",
+      "200 20 2\n",
+      "300 30 3\n",
+      "400 40 4\n",
+      "500 50 5\n",
+      "600 60 6\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "test()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "hide_input": false,
+  "kernelspec": {
+   "display_name": "Rust",
+   "language": "rust",
+   "name": "rust"
+  },
+  "language_info": {
+   "codemirror_mode": "rust",
+   "file_extension": ".rs",
+   "mimetype": "text/rust",
+   "name": "Rust",
+   "pygment_lexer": "rust",
+   "version": ""
+  },
+  "varInspector": {
+   "cols": {
+    "lenName": 16,
+    "lenType": 16,
+    "lenVar": 40
+   },
+   "kernels_config": {
+    "python": {
+     "delete_cmd_postfix": "",
+     "delete_cmd_prefix": "del ",
+     "library": "var_list.py",
+     "varRefreshCmd": "print(var_dic_list())"
+    },
+    "r": {
+     "delete_cmd_postfix": ") ",
+     "delete_cmd_prefix": "rm(",
+     "library": "var_list.r",
+     "varRefreshCmd": "cat(var_dic_list()) "
+    }
+   },
+   "types_to_exclude": [
+    "module",
+    "function",
+    "builtin_function_or_method",
+    "instance",
+    "_Feature"
+   ],
+   "window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
