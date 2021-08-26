@@ -5,7 +5,7 @@ import sys
 
 import numpy as np
 sys.path.append(r'/Users/haneeshkesari/Downloads/cmake_example/cmake-build-debug/')
-from pythonCppDemo import *
+from pythonppDemo import *
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -29,17 +29,20 @@ def plot(xi,yi):
 
 # %%
 
-fig=plot(x,cos(10*x)*sin(x));
+fig=plot(x,np.cos(10*x)*np.sin(x));
 fig.show()
 
  # %%
 
-
-fig = go.Figure()
-fig.add_trace(go.Scatter(x=x, y=sin(x), name='High 2014',
+x0=np.array(LinSpace(-10,10,10))
+y0=np.sin(x0)
+fig1 = go.Figure()
+fig1.add_trace(go.Scatter(x=x0, y=y0, name='High 2014',
                          line=dict(color='firebrick', width=1,dash="dashdot")))
 
 
 
 
-! pwd
+fig1.show()
+import matplotlib.pyplot as plt
+plt.plot(x0, y0)
